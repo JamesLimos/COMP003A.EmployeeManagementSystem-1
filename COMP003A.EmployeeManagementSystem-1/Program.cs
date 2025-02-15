@@ -5,6 +5,7 @@ namespace COMP003A.EmployeeManagementSystem_1
     internal class Program
     {
         static void Main(string[] args)
+
         {
             Console.Write("EnterEmployeeID: ");
             string EmployeeID = Console.ReadLine();
@@ -23,11 +24,13 @@ namespace COMP003A.EmployeeManagementSystem_1
             myEmployee.DisplayEmployeeInfo();
 
             HRDepartment HRDepartment = new HRDepartment();
+
             HRDepartment.GetDepartmentDetails();
             HRDepartment.DisplayDepartmentInfo();
             HRDepartment.Operate();
 
             ITDepartment ITDepartment = new ITDepartment();
+
             ITDepartment.GetDepartmentDetails();
             ITDepartment.DisplayDepartmentInfo();
             ITDepartment.Operate();

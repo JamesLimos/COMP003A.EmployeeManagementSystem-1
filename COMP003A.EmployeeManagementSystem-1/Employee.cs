@@ -40,6 +40,14 @@
                 _salary = value;
             }
         }
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="EmployeeID"></param>
+        /// <param name="FirstName"></param>
+        /// <param name="LastName"></param>
+        /// <param name="Salary"></param>
+        /// <param name="MiddleName"></param>
         public Employee(string EmployeeID, string FirstName, string LastName, double Salary, string MiddleName = "")
         {
             _employeeID = EmployeeID;
@@ -48,6 +56,9 @@
             _middleName = MiddleName;
             _salary = Salary;
         }
+        /// <summary>
+        /// Prints the name and id of employee
+        /// </summary>
         public void PrintFullName()
         {
             Console.WriteLine($"Employee ID: {EmployeeID}");
@@ -55,6 +66,9 @@
  
 
         }
+        /// <summary>
+        /// displays employee salary
+        /// </summary>
         public void DisplayEmployeeInfo()
         {
             PrintFullName();
