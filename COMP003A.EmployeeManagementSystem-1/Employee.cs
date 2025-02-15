@@ -50,16 +50,10 @@
         }
         public void PrintFullName()
         {
-            if (string.IsNullOrWhiteSpace(MiddleName))
-            {
-                Console.WriteLine($"Employee ID: {EmployeeID}");
-                Console.WriteLine($"Name: {FirstName} {LastName}");
-            }
-            else
-            {
-                Console.WriteLine($"Employee ID: {EmployeeID}");
-                Console.WriteLine($"{FirstName} {(string.IsNullOrWhiteSpace(MiddleName) ? "" : MiddleName + "")} {LastName}");
-            }
+            Console.WriteLine($"Employee ID: {EmployeeID}");
+            Console.WriteLine($"{FirstName} {(string.IsNullOrWhiteSpace(MiddleName) ? "" : MiddleName + "")} {LastName}");
+ 
+
         }
         public void DisplayEmployeeInfo()
         {
