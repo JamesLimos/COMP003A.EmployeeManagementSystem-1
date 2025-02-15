@@ -16,25 +16,12 @@
         {
             get { return _firstName; }
             set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("Cannot be empty");
-                }
-                _firstName = value;
-            }
+            { _firstName = value;}
         }
         public string LastName
         {
             get { return _lastName; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("Cannot be empty");
-                }
-                _lastName = value;
-            }
+            set { _lastName = value; }
         }
         public string MiddleName
         {
@@ -65,11 +52,13 @@
         {
             if (string.IsNullOrWhiteSpace(MiddleName))
             {
-                Console.WriteLine($"{FirstName} {LastName}");
+                Console.WriteLine($"Employee ID: {EmployeeID}");
+                Console.WriteLine($"Name: {FirstName} {LastName}");
             }
             else
             {
-                Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
+                Console.WriteLine($"Employee ID: {EmployeeID}");
+                Console.WriteLine($"{FirstName} {(string.IsNullOrWhiteSpace(MiddleName) ? "" : MiddleName + "")} {LastName}");
             }
         }
         public void DisplayEmployeeInfo()

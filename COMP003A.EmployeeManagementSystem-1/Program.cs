@@ -7,24 +7,28 @@ namespace COMP003A.EmployeeManagementSystem_1
         static void Main(string[] args)
         {
             Console.Write("EnterEmployeeID: ");
-            string employeeID = Console.ReadLine();
+            string EmployeeID = Console.ReadLine();
             Console.Write("Enter First Name: ");
-            string firstName = Console.ReadLine();
+            string FirstName = Console.ReadLine();
             Console.Write("Enter Middle Name (Press Enter to skip): ");
-            string middleName = Console.ReadLine();
+            string MiddleName = Console.ReadLine();
             Console.Write("Enter Last Name: ");
-            string lastName = Console.ReadLine();
+            string LastName = Console.ReadLine();
             Console.Write("Enter Salary: ");
-            double salary = double.Parse(Console.ReadLine());
+            double Salary = double.Parse(Console.ReadLine());
 
-            Employee myEmployee = new Employee(employeeID, firstName, middleName, salary, lastName);
+            Console.WriteLine("\nEmployee created succefully!\n");
+
+            Employee myEmployee = new Employee(EmployeeID, FirstName, MiddleName, Salary, LastName);
             myEmployee.DisplayEmployeeInfo();
 
             HRDepartment HRDepartment = new HRDepartment();
+            HRDepartment.GetDepartmentDetails();
             HRDepartment.DisplayDepartmentInfo();
             HRDepartment.Operate();
 
             ITDepartment ITDepartment = new ITDepartment();
+            ITDepartment.GetDepartmentDetails();
             ITDepartment.DisplayDepartmentInfo();
             ITDepartment.Operate();
 

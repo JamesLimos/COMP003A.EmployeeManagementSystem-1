@@ -43,6 +43,6 @@
 
     interface IDepartmentOperations
     {
-        void Operate();
+         void Operate();
     }
 }
